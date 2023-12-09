@@ -1,0 +1,83 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<main>
+    <center>
+        <h1 class="content_title">
+            アップされた写真は{{probability}}％の確率で{{label}}です。
+        </h1>
+        <img src= "{{ img_path }}" style="margin: 20px; vertical-align: bottom; width: 200px;">
+        <a href="/">他の選手も予測してみる</a>
+    </center>
+    
+    <div class="all">
+        <div class="item-img"><img src="../static/background_image/vinicius.png" height="470"></div>
+        <div class="items-vert">
+            <div class="info">
+                <div class="number">7</div>
+                <div class="n-and-p">
+                    <div class="name">ヴィニシウス・ジュニオール</div>
+                    <div class="position">フォワード</div>
+                </div>
+            </div>
+            <div class="items">
+                <div class="item">
+                    <div class="item-body">
+                        <div class="item-title">基本情報</div>
+                        <p>
+                            所属クラブ：レアルマドリード<br>
+                            国籍：ブラジル<br>
+                            　　　スペイン<br>
+                            代表：ブラジル代表<br>
+                            生年月日：2000年7月12日<br>
+                            身長：176cm<br>
+                            体重：73kg<br>
+                            利き足：右足
+                        </p>
+                    </div>
+                </div><!-- /.item -->
+                <div class="item">
+                    <div class="item-p-body">
+                        <div class="item-title">プレースタイル</div>
+                        <p>
+                            レアルマドリードの新エース<br>
+                            とにかくドリブルが上手い。ヴィニシウスの一対一は本当に見ていて楽しい。
+                            さらにスピードもあり、一度向き去るとほぼ確実に追いつかれない。
+                            また、移籍当初、課題と言われていた決定力も身に付けており本当に手が付けられない選手。
+                            ぜひ、バロンドールを獲得してほしい。
+                        </p>
+                    </div>
+                </div><!-- /.item -->
+            </div><!-- /.items -->
+        </div>
+    </div>
+    <div class="details">
+        <div class="detail-item">
+            <div class="item-body">
+                <div class="item-title">詳細情報</div>
+                <a href = "https://www.transfermarkt.com/vinicius-junior/leistungsdaten/spieler/371998">ヴィニシウスの今季成績(Check from here!!)</a>
+                <p>
+                    主にプレーするポジション：左ウィング<br>
+                    市場価値：240億円<br>
+                    所属リーグ：ラ・リーガ<br>
+                    主な獲得タイトル：UEFA CL(1)、UEFA スーパーカップ(1)、ラ・リーガ(2)、<br>
+                    　　　　　　　　　FIFA クラブ・ワールドカップ(1)、スペイン国王杯(1)、<br>
+                    　　　　　　　　　スーペルコパ(2)<br>
+                    <br>
+                    豆情報：代表の先輩であるネイマールに比べて夜遊びやパーティの噂が一切ない品行方正さ。<br>
+                    　　　　しかし、名声も金も手に入れてしまった彼に誘惑は多い。ぜひとも気を付けて今後<br>
+                    　　　　も活躍してほしい。<br>
+                </p>
+            </div>
+        </div>
+        <div class="detail-item">
+            <div class="movie-body">
+                <div class="movie-title">ヴィニシウスの超絶ドリブル集</div>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/GjAs4J4fBs0" title="YouTube video player" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+    
+</main>
+
+{% endblock %}

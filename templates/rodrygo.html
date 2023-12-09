@@ -1,0 +1,73 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<main>
+    <center>
+        <h1 class="content_title">
+            アップされた写真は{{probability}}％の確率で{{label}}です。
+        </h1>
+        <img src= "{{ img_path }}" style="margin: 20px; vertical-align: bottom; width: 200px;">
+        <a href="/">他の選手も予測してみる</a>
+    </center>
+    
+    <div class="all">
+        <div class="item-img"><img src="../static/background_image/rodrygo.png" height="470"></div>
+        <div class="items-vert">
+            <div class="info">
+                <div class="number">11</div>
+                <div class="n-and-p">
+                    <div class="name">ロドリゴ・ゴエズ</div>
+                    <div class="position">フォワード</div>
+                </div>
+            </div>
+            <div class="items">
+                <div class="item">
+                    <div class="item-body">
+                        <div class="item-title">基本情報</div>
+                        <p>
+                            所属クラブ：レアルマドリード<br>
+                            国籍：ブラジル、スペイン<br>
+                            代表：ブラジル代表<br>
+                            生年月日：2001年1月9日<br>
+                            身長：174cm<br>
+                            体重：63kg<br>
+                        </p>
+                    </div>
+                </div><!-- /.item -->
+                <div class="item">
+                    <div class="item-body">
+                        <div class="item-title">プレースタイル</div>
+                        <p>
+                            オフザボールの動きとボールタッチは一級品！数字上ではあまり見えない部分が多いが、こいつの働きには頭が上がらないぜ！ぜひ、ゴールを量産してほしい
+                        </p>
+                    </div>
+                </div><!-- /.item -->
+            </div><!-- /.items -->
+        </div>
+    </div>
+    <div class="details">
+        <div class="detail-item">
+            <div class="item-body">
+                <div class="item-title">詳細情報</div>
+                <a href = "https://www.transfermarkt.com/rodrygo/leistungsdaten/spieler/412363">ロドリゴの今季成績(Check from here!!)</a>
+                <p>
+                    主にプレーするポジション：ライトウィングフォワード<br>
+                    市場価値：160億円<br>
+                    所属リーグ：ラ・リーガ<br>
+                    獲得タイトル：UEFA CL(1)、FIFA クラブ・ワールドカップ(1)、ラ・リーガ(2)、<br>
+                    　　　　　　　UEFA スーパーカップ(1)、スペイン国王杯(1)<br>
+                    豆情報：チャンピオンズリーグだと覚醒する特殊能力持ち
+                </p>
+            </div>
+        </div>
+        <div class="detail-item">
+            <div class="movie-body">
+                <div class="movie-title">ロドリゴのスーパープレイ集</div>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/MZOp6sjcWO0" title="YouTube video player" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+    
+</main>
+
+{% endblock %}

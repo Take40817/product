@@ -1,0 +1,83 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<main>
+    <center>
+        <h1 class="content_title">
+            アップされた写真は{{probability}}％の確率で{{label}}です。
+        </h1>
+        <img src= "{{ img_path }}" style="margin: 20px; vertical-align: bottom; width: 200px;">
+        <a href="/">他の選手も予測してみる</a>
+    </center>
+    
+    <div class="all">
+        <div class="item-img"><img src="../static/background_image/courtois.png" height="470"></div>
+        <div class="items-vert">
+            <div class="info">
+                <div class="number">1</div>
+                <div class="n-and-p">
+                    <div class="name">ティボ・クルトゥワ</div>
+                    <div class="position">ゴールキーパー</div>
+                </div>
+            </div>
+            <div class="items">
+                <div class="item">
+                    <div class="item-body">
+                        <div class="item-title">基本情報</div>
+                        <p>
+                            所属クラブ：レアルマドリード<br>
+                            国籍：ベルギー<br>
+                            代表：ベルギー代表<br>
+                            生年月日：1992年5月11日<br>
+                            身長：200cm<br>
+                            体重：96kg<br>
+                            利き足：左足
+                        </p>
+                    </div>
+                </div><!-- /.item -->
+                <div class="item">
+                    <div class="item-p-body">
+                        <div class="item-title">プレースタイル</div>
+                        <p>
+                            レアルマドリードの守護神<br>
+                            その長い手足にちなんで愛称は「タランチュラ」。長い手足でありとあらゆるシュートをことごとく止める。
+                            これは誇張表現でもなんでもなく本当にほぼ止めるまさに”超人”。
+                            クルトゥワがいなければ勝てない試合が数えきれないほどある。
+                            ただし、真性のクズ。詳しくは「豆情報」で。
+                        </p>
+                    </div>
+                </div><!-- /.item -->
+            </div><!-- /.items -->
+        </div>
+    </div>
+    <div class="details">
+        <div class="detail-item">
+            <div class="item-body">
+                <div class="item-title">詳細情報</div>
+                <a href = "https://www.transfermarkt.com/thibaut-courtois/leistungsdaten/spieler/108390">クルトゥワの今季成績(Check from here!!)</a>
+                <p>
+                    主にプレーするポジション：ゴールキーパー<br>
+                    市場価値：70億円(ゴールキーパーとしてはすごく高い)<br>
+                    所属リーグ：ラ・リーガ<br>
+                    主な獲得タイトル：UEFA CL(1)、UEFA EL(1)、FIFA クラブ・ワールドカップ(1)、<br>
+                    　　　　　　　　　UEFA スーパーカップ(2)、ラ・リーガ(3)、スペイン国王杯(2)、<br>
+                    　　　　　　　　　スーペルコパ(2)、プレミア・リーグ(2)、FAカップ(1)<br>
+                    <br>
+                    豆情報：めちゃめちゃクズ。代表のチームメイトの妻を寝取り強奪。しかも、現在は別の妻が<br>
+                    　　　　いる。その他にも、移籍した瞬間に前のチームをディスりだしたりする。最近では、<br>
+                    　　　　ベルギー代表のキャプテンになれなかったことに激怒し、遠征中にもかかわらず一人<br>
+                    　　　　で帰宅した。
+                </p>
+            </div>
+        </div>
+        <div class="detail-item">
+            <div class="movie-body">
+                <div class="movie-title">クルトゥワのスーパーセーブ集</div>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/F8NGWznllzo" title="YouTube video player" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+    
+</main>
+
+{% endblock %}

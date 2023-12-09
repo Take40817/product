@@ -1,0 +1,257 @@
+* {
+    box-sizing: border-box;
+}
+  
+body {
+    margin: 0;
+    font-family: "Hiragino Sans W3", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+    background-image: url("../background_image/real-madrid.jpg");
+    background-size: cover;
+}
+  
+/* *********************************
+headerの設定
+*********************************** */
+header {
+    height: 60px;
+    width: 100%;
+    padding: 0px 15px;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    display: flex;
+}
+  
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+  
+nav {
+    margin: 0 0 0 auto;
+}
+  
+ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    line-height: 60px;
+    padding: 0 20px;
+}
+
+/* *********************************　
+mainの設定
+*********************************** */
+
+main {
+    padding: 60px;
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    top: 0;
+}
+
+.content_title {
+    color: black;
+}
+
+.content {
+    box-sizing: border-box;
+    width:50%;
+    background-color:#a3a3a3;
+    color: #666;
+    padding:.7em;
+    margin: 5px auto;
+    border: 3px solid rgb(154, 170, 245);
+    border-radius: 15px;
+}
+
+.content p { /* p要素に背景や角丸を指定 */
+    margin:5px 0 0;
+    padding:10px;
+    background-color: rgb(255, 255, 255);
+    border-radius:8px;
+    font-size:25px;
+}
+
+.content h1 {
+    font-size: 20px;
+    color: #925cf7;/* 文字色 */
+    padding: 0.5em 0;/* 上下の余白 */
+    border-top: solid 3px #925cf7;/* 上線 */
+    border-bottom: solid 3px #925cf7;/* 下線 */
+}
+
+.all {
+    display: flex;
+    justify-content: center;
+}
+
+.all>div{
+    margin: 70px;
+}
+
+.items-vert {
+    position: relative;
+}
+
+.info {
+    display: flex;
+}
+
+.info>div{
+    margin: 20px;
+}
+
+.number {
+    font-size: 90px;
+    font-weight: bold;
+    color: #7531f3;
+}
+
+.n-and-p {
+    text-align: left;
+}
+
+.name {
+    font-size: 50px;
+    font-weight: bold;
+    color: #0a002c;
+}
+
+.position {
+    font-size: 30px;
+    color: #23125a;
+}
+
+.items {
+    box-sizing: border-box;
+    width: 800px;
+    background-color:#0a002c;
+    color: rgb(104, 104, 104);
+    padding:.7em;
+    margin: 5px auto;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.item {
+    width: 45%;
+}
+
+.item-body p {
+    margin:5px 0 0;
+    padding:10px;
+    font-size:20px;
+    text-align: left;
+    color: white;
+}
+
+.item-p-body p {
+    margin:5px 0 0;
+    padding:10px;
+    font-size:18px;
+    text-align: left;
+    color: white;
+}
+
+.item-body a {
+    margin:5px 0 0;
+    padding:10px;
+    font-size:25px;
+    text-align: left;
+    color: antiquewhite;
+}
+
+.item-body a:hover {
+    color: rgb(255, 145, 0);
+}
+
+.item-title{
+    font-size: 20px;
+    font-weight: bold;
+    color: #a983ee;/* 文字色 */
+    padding: 0.5em 0;/* 上下の余白 */
+    border-top: solid 3px #a983ee;/* 上線 */
+    border-bottom: solid 3px #a983ee;/* 下線 */
+}
+
+.details {
+    box-sizing: border-box;
+    width: 900px;
+    background-color:#0a002c;
+    color: rgb(104, 104, 104);
+    padding:.7em;
+    margin: 5px auto;
+    border-radius: 15px;
+}
+
+.movie-body {
+    margin:5px 0 0;
+    padding:10px;
+    background-color: #0a002c;
+    border-radius:8px;
+    font-size:25px;
+}
+
+.movie-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(255, 196, 0);/* 文字色 */
+    padding: 0.5em 0;/* 上下の余白 */
+}
+
+.form_control {
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.upload_btn { /* p要素に背景や角丸を指定 */
+    margin:5px 0 0;
+    padding:10px;
+    background-color: rgb(255, 255, 255);
+    border-radius:8px;
+    font-size:25px;
+}
+
+.upload_btn [type="submit"] {
+    text-align: center;
+    margin: 10px auto;
+    padding: 1px;
+    width: 150px;
+    font-size: 18px;
+    background-color: rgb(123, 246, 240);
+    border-radius: 50vh;
+    cursor: pointer;
+}
+
+.upload_btn [type="submit"]:hover {
+    background-color: rgb(0, 217, 255);
+}
+
+
+/* *********************************　
+footerの設定
+*********************************** */
+footer {
+    width: 100%; /* 幅いっぱいを指定 */
+    height: 50px; /* 高さを指定 */
+    display: inline-block;
+    background: white; /* 背景色を指定 */
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+}
+  
+.footer_logo {
+    line-height: 50px;
+}

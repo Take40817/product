@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<main>
+    <h1 class="content_title">さっそくサッカー選手の写真を入力！</h1>
+    <div class="content">
+        <form action = "/upload" method="post" enctype="multipart/form-data">
+            <p><input type="file" id = "upload_file" name = "upload_file" multiple="multiple" class="form_control"></p>
+            <div class="upload_btn">
+                <input type="submit" value="送信">
+            </div>
+        </form>
+    </div>
+</main>
+
+{% endblock %}

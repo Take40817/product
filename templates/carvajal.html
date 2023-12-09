@@ -1,0 +1,80 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<main>
+    <center>
+        <h1 class="content_title">
+            アップされた写真は{{probability}}％の確率で{{label}}です。
+        </h1>
+        <img src= "{{ img_path }}" style="margin: 20px; vertical-align: bottom; width: 200px;">
+        <a href="/">他の選手も予測してみる</a>
+    </center>
+    
+    <div class="all">
+        <div class="item-img"><img src="../static/background_image/carvajal.png" height="470"></div>
+        <div class="items-vert">
+            <div class="info">
+                <div class="number">2</div>
+                <div class="n-and-p">
+                    <div class="name">ダニエル・カルバハル</div>
+                    <div class="position">ディフェンダー</div>
+                </div>
+            </div>
+            <div class="items">
+                <div class="item">
+                    <div class="item-body">
+                        <div class="item-title">基本情報</div>
+                        <p>
+                            所属クラブ：レアルマドリード<br>
+                            国籍：スペイン<br>
+                            代表：スペイン代表<br>
+                            生年月日：1992年1月11日<br>
+                            身長：173cm<br>
+                            体重：73kg<br>
+                            利き足：右足
+                        </p>
+                    </div>
+                </div><!-- /.item -->
+                <div class="item">
+                    <div class="item-p-body">
+                        <div class="item-title">プレースタイル</div>
+                        <p>
+                            右サイドからの攻撃を活性化させる選手<br>
+                            右サイドを縦横無尽に駆け回り、攻撃も守備も確実にやってくれる仕事人！
+                            対人守備もポジショニングもとても上手く、通になればこいつの動きを見ているだけで試合が楽しめるとか。
+                            かつてのスピードはないものの経験と技術でそれをカバーしているベテランだ！
+                        </p>
+                    </div>
+                </div><!-- /.item -->
+            </div><!-- /.items -->
+        </div>
+    </div>
+    <div class="details">
+        <div class="detail-item">
+            <div class="item-body">
+                <div class="item-title">詳細情報</div>
+                <a href = "https://www.transfermarkt.com/daniel-carvajal/leistungsdaten/spieler/138927">カルバハルの今季成績(Check from here!!)</a>
+                <p>
+                    主にプレーするポジション：右サイドバック<br>
+                    市場価値：20億円<br>
+                    所属リーグ：ラ・リーガ<br>
+                    主な獲得タイトル：UEFA CL(5)、FIFA クラブ・ワールドカップ(6)、ラ・リーガ(3)、<br>
+                    　　　　　　　　　UEFA スーパーカップ(4)、スペイン国王杯(2)、スーペルコパ(3)<br>
+                    　　　　　　　　　ネーションズリーグ(1)<br>
+                    <br>
+                    豆情報：とにかくメンタルが強い。チャンピオンズリーグの決勝前にチームメイトとトランプ<br>
+                    　　　　で遊んでいたとか。
+                </p>
+            </div>
+        </div>
+        <div class="detail-item">
+            <div class="movie-body">
+                <div class="movie-title">カルバハルのスーパープレイ集</div>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/hcgMqlm8-nA" title="YouTube video player" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+    
+</main>
+
+{% endblock %}

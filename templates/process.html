@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<main>
+    <center>
+        <h1 class="content_title">
+            どの選手の情報が見たいですか？
+        </h1>
+        {% for img_path in processed_image_paths %}
+            <img src= "{{ img_path }}" style="margin: 20px; vertical-align: bottom; width: 200px;">
+        {% endfor %}
+        <a href="/">他の選手も予測してみる</a>
+    </center>
+</main>
+
+{% endblock %}
