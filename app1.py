@@ -28,6 +28,7 @@ def process_use_files():
             for filename in os.listdir(PROCESSED_FOLDER)
             if filename.endswith((".jpg", ".jpeg", ".png", ".gif"))
         ]
+        print(processed_image_paths)
         # PREPROCESS_FOLDER内の画像を削除
         os.remove(img_path)
         return render_template(

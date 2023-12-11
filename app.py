@@ -12,6 +12,11 @@ def index():
     return render_template("index.html")
 
 
+@app.route("/rule")
+def rule():
+    return render_template("rule.html")
+
+
 @app.route("/upload", methods=["GET", "POST"])
 def upload_user_files():
     if request.method == "POST":
