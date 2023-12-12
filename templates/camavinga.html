@@ -1,0 +1,85 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<main>
+    <center>
+        <h1 class="content_title">
+            アップされた写真は{{probability}}％の確率で{{label}}です。
+        </h1>
+        <img src= "{{ img_path }}" style="margin: 20px; vertical-align: bottom; width: 200px;">
+        <a href="/">他の選手も予測してみる</a>
+    </center>
+    
+    <div class="all">
+        <div class="item-img"><img src="../static/background_image/bellingham.png"></div>
+        <div class="items-vert">
+            <div class="info">
+                <div class="number">12</div>
+                <div class="n-and-p">
+                    <div class="name">エドゥアル・カマヴィンガ</div>
+                    <div class="position">ミッドフィルダー</div>
+                </div>
+            </div>
+            <div class="items">
+                <div class="item">
+                    <div class="item-body">
+                        <div class="item-title">基本情報</div>
+                        <p>
+                            所属クラブ：レアルマドリード<br>
+                            国籍：フランス<br>
+                            　　　アンゴラ<br>
+                            　　　コンゴ共和国<br>
+                            代表：フランス代表<br>
+                            生年月日：2002年11月10日<br>
+                            身長：182cm<br>
+                            体重：68kg<br>
+                            利き足：左足
+                        </p>
+                    </div>
+                </div><!-- /.item -->
+                <div class="item">
+                    <div class="item-p-body">
+                        <div class="item-title">プレースタイル</div>
+                        <p>
+                            とにかく身体能力が高い選手<br>
+                            身体能力が非常に高く、無理な態勢からでもタックルをしに行き、
+                            相手選手からボールを刈り取りまくる。タックルする姿を見ればわかると思うが
+                            スライディングの伸びがとにかくすごい。「そこまで届くの！？」ということは多々ある。
+                            また、戦術理解度も高く、本職でないポジションで出場してもそつなくこなすすごい選手。
+                        </p>
+                    </div>
+                </div><!-- /.item -->
+            </div><!-- /.items -->
+        </div>
+    </div>
+    <div class="details">
+        <div class="detail-item">
+            <div class="item-body">
+                <div class="item-title">詳細情報</div>
+                <a href = "https://www.transfermarkt.com/eduardo-camavinga/profil/spieler/640428">カマヴィンガの今季成績(Check from here!!)</a>
+                <p>
+                    主にプレーするポジション：セントラルミッドフィルダー<br>
+                    市場価値：144億円<br>
+                    所属リーグ：ラ・リーガ<br>
+                    主な獲得タイトル：UEFA CL(1)、UEFA スーパーカップ(1)、ラ・リーガ(1)、<br>
+                    　　　　　　　　　FIFA クラブ・ワールドカップ(1)、スペイン国王杯(1)、<br>
+                    　　　　　　　　　スーペルコパ(1)、ネーションズリーグ<br>
+                    豆情報：ワールドカップでアルゼンチン代表に敗北した際に、相手チームのアグエロという選
+                    　　　　手にロッカールームで死ぬほど煽られる。何がやばいかというとアグエロは代表から
+                    　　　　引退しているのにも関わらず、あたかも自分が代表で戦った選手のように振る舞い、
+                    　　　　自分より18歳ほど年下の選手に対してインスタライブでめちゃくちゃに煽っていたこ
+                    　　　　とだ。私はめちゃくちゃ嫌いな選手だ。
+                </p>
+            </div>
+        </div>
+        <div class="detail-item">
+            <div class="movie-body">
+                <div class="movie-title">ベリンガムのスーパープレイ集</div>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/Xv3DJfoFAJU" title="YouTube video player" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+    
+</main>
+
+{% endblock %}

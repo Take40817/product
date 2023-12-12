@@ -13,6 +13,9 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
+    # index.htmlを開く際にprocessed_imgageを空にする
+    for f in os.listdir(PROCESSED_FOLDER):
+        os.remove(os.path.join(PROCESSED_FOLDER, f))
     return render_template("index.html")
 
 
@@ -36,98 +39,111 @@ def process_use_files():
         )
 
 
+@app.route("/rule")
+def rule():
+    return render_template("rule.html")
+
+
 @app.route("/processed", methods=["GET", "POST"])
 def upload_user_files():
     if request.method == "POST":
         # processed_image内の一つの写真を使って予測
-        processed_file = request.files["processed_file"]
-        img_path = os.path.join(UPLOAD_FOLDER, processed_file.filename)
-        processed_file.save(img_path)
-        label, probability = predict(img_path)
-        # ここらへんでprocessed_imageの中身を消すべし
+        # processed_file = request.files["processed_file"]
+        # img_path = os.path.join(UPLOAD_FOLDER, processed_file.filename)
+        # processed_file.save(img_path)
+        # label, probability = predict(img_path)
+        processed_file = request.form.get("processed_file")
+        label, probability = predict(processed_file)
         if label == "alaba":
             return render_template(
                 "alaba.html",
                 probability=int(probability),
                 label=label,
-                img_path=img_path,
+                img_path=processed_file,
             )
         elif label == "bellingham":
             return render_template(
                 "bellingham.html",
                 probability=int(probability),
                 label=label,
-                img_path=img_path,
+                img_path=processed_file,
+            )
+        elif label == "camavinga":
+            return render_template(
+                "camavinga.html",
+                probability=int(probability),
+                label=label,
+                img_path=processed_file,
             )
         if label == "carvajal":
             return render_template(
                 "carvajal.html",
                 probability=int(probability),
                 label=label,
-                img_path=img_path,
+                img_path=processed_file,
             )
         elif label == "courtois":
             return render_template(
                 "courtois.html",
                 probability=int(probability),
                 label=label,
-                img_path=img_path,
+                img_path=processed_file,
             )
         elif label == "kroos":
             return render_template(
                 "kroos.html",
                 probability=int(probability),
                 label=label,
-                img_path=img_path,
+                img_path=processed_file,
             )
         elif label == "militao":
             return render_template(
                 "militao.html",
                 probability=int(probability),
                 label=label,
-                img_path=img_path,
+                img_path=processed_file,
             )
         elif label == "modric":
             return render_template(
                 "modric.html",
                 probability=int(probability),
                 label=label,
-                img_path=img_path,
+                img_path=processed_file,
             )
         elif label == "nacho":
             return render_template(
                 "nacho.html",
                 probability=int(probability),
                 label=label,
-                img_path=img_path,
+                img_path=processed_file,
             )
         elif label == "rodrygo":
             return render_template(
                 "rodrygo.html",
                 probability=int(probability),
                 label=label,
-                img_path=img_path,
+                img_path=processed_file,
             )
         elif label == "taa":
             return render_template(
                 "taa.html",
                 probability=int(probability),
                 label=label,
-                img_path=img_path,
+                img_path=processed_file,
             )
         elif label == "valverde":
             return render_template(
                 "valverde.html",
                 probability=int(probability),
                 label=label,
-                img_path=img_path,
+                img_path=processed_file,
             )
         elif label == "vinicius":
             return render_template(
                 "vinicius.html",
                 probability=int(probability),
                 label=label,
-                img_path=img_path,
+                img_path=processed_file,
             )
 
 

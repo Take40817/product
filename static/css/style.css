@@ -9,7 +9,7 @@ body {
     background-size: cover; */
     background-color: rgb(236, 207, 255);
 }
-  
+
 /* *********************************
 headerの設定
 *********************************** */
@@ -94,14 +94,15 @@ main {
 .rule-content {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .rule-content>div {
-    margin: 50px;
+    margin: 0 50px;
 }
 
 .rule-content-b {
-    width: 50%;
+    width: 60%;
     margin: auto;
 }
 
@@ -112,10 +113,13 @@ main {
     text-align: left;
 }
 
-.rule-img img {
-    display: table-cell;
+.rule-img {
     vertical-align: middle;
-    height: 500px;
+}
+
+.rule-img img {
+    display: inline-block;
+    width: 350px;
 }
 
 .link-content p {
@@ -140,10 +144,12 @@ main {
 .all {
     display: flex;
     justify-content: center;
+    align-items: center;
+    margin: 100px 0;
 }
 
 .all>div{
-    margin: 70px;
+    margin: 50px;
 }
 
 .items-vert {
@@ -189,6 +195,15 @@ main {
     border-radius: 15px;
     display: flex;
     justify-content: space-around;
+}
+
+.item-img {
+    vertical-align: middle;
+}
+
+.item-img img {
+    display: inline-block;
+    height: 470px;
 }
 
 .item {

@@ -1,15 +1,18 @@
 {% extends "layout.html" %}
 {% block content %}
 
-<main>
-    <center>
+<main style="text-align: center;">
+    <form action="/processed" method="post">
         <h1 class="content_title">
             どの選手の情報が見たいですか？
         </h1>
         {% for img_path in processed_image_paths %}
-            <img src= "{{ img_path }}" style="margin: 20px; vertical-align: bottom; width: 200px;">
+            <img src="{{ img_path }}" style="margin: 20px; width: 200px;">
+            <input type="radio" name="processed_file" value="{{ img_path }}">
         {% endfor %}
-    </center>
+        <br>
+        <button type="submit">選択</button>
+    </form>
 </main>
 
 {% endblock %}

@@ -11,6 +11,7 @@ def predict(input_filename):
     classes = [
         "alaba",
         "bellingham",
+        "camavinga",
         "carvajal",
         "courtois",
         "kroos",
@@ -31,7 +32,7 @@ def predict(input_filename):
     input_image = np.expand_dims(input_image, axis=0)
     input_image = preprocess_input(input_image)
 
-    model = load_model("ResNet50_conv4_12.h5", compile=False)
+    model = load_model("ResNet50_conv4_13.h5", compile=False)
 
     result = model.predict(input_image)
 
