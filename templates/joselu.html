@@ -1,0 +1,77 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<main>
+    <center>
+        <h1 class="content_title">
+            アップされた写真は{{probability}}％の確率で{{label}}です。
+        </h1>
+        <img src= "{{ img_path }}" style="margin: 20px; vertical-align: bottom; width: 200px;">
+        <a href="/">他の選手も予測してみる</a>
+    </center>
+    
+    <div class="all">
+        <div class="item-img"><img src="../static/player_image/joselu.png"></div>
+        <div class="items-vert">
+            <div class="info">
+                <div class="number">14</div>
+                <div class="n-and-p">
+                    <div class="name">ホセル・マト</div>
+                    <div class="position">フォワード</div>
+                </div>
+            </div>
+            <div class="items">
+                <div class="item">
+                    <div class="item-body">
+                        <div class="item-title">基本情報</div>
+                        <p>
+                            所属クラブ：レアルマドリード<br>
+                            国籍：スペイン<br>
+                            代表：スペイン代表<br>
+                            生年月日：1990年3月27日<br>
+                            身長：191cm<br>
+                            体重：86kg<br>
+                            利き足：右足
+                        </p>
+                    </div>
+                </div><!-- /.item -->
+                <div class="item">
+                    <div class="item-p-body">
+                        <div class="item-title">プレースタイル</div>
+                        <p>
+                            今シーズン新加入の苦労人フォワード<br>
+                            オフザボールの動きがとても良い選手で典型的なストライカータイプ。
+                            「ここにいてほしい」という場所にポジションをとっており、得点を量産する。
+                            また、たまにアクロバティックなゴールを決めるため見ているとなんかありそう感が漂う。
+                            しかし、イージーゴールを外す場面も散見されるため、まだ本調子とは言えないだろう。
+                        </p>
+                    </div>
+                </div><!-- /.item -->
+            </div><!-- /.items -->
+        </div>
+    </div>
+    <div class="details">
+        <div class="detail-item">
+            <div class="item-body">
+                <div class="item-title">詳細情報</div>
+                <a href = "https://www.transfermarkt.com/joselu/profil/spieler/81999">ホセルの今季成績(Check from here!!)</a>
+                <p>
+                    主にプレーするポジション：センターフォワード<br>
+                    市場価値：10億円<br>
+                    所属リーグ：ラ・リーガ<br>
+                    主な獲得タイトル：ネーションズリーグ(1)、<br>
+                    豆情報：レアルマドリードでプレーすることが大好きであると選手を見ているとよくわかる。
+                </p>
+            </div>
+        </div>
+        <div class="detail-item">
+            <div class="movie-body">
+                <div class="movie-title">ホセルのゴール集</div>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/hTaN0lYAbas" title="YouTube video player" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+    
+</main>
+
+{% endblock %}

@@ -13,7 +13,9 @@ def predict(input_filename):
         "bellingham",
         "camavinga",
         "carvajal",
+        "ceballos",
         "courtois",
+        "joselu",
         "kroos",
         "militao",
         "modric",
@@ -21,6 +23,7 @@ def predict(input_filename):
         "rodrygo",
         "taa",
         "valverde",
+        "vazquez",
         "vinicius",
     ]
 
@@ -32,7 +35,7 @@ def predict(input_filename):
     input_image = np.expand_dims(input_image, axis=0)
     input_image = preprocess_input(input_image)
 
-    model = load_model("./model/ResNet50_conv4_13.h5", compile=False)
+    model = load_model("./model/ResNet50_conv4_16.h5", compile=False)
 
     result = model.predict(input_image)
 

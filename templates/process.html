@@ -2,17 +2,26 @@
 {% block content %}
 
 <main style="text-align: center;">
-    <form action="/processed" method="post">
-        <h1 class="content_title">
-            どの選手の情報が見たいですか？
-        </h1>
-        {% for img_path in processed_image_paths %}
-            <img src="{{ img_path }}" style="margin: 20px; width: 200px;">
-            <input type="radio" name="processed_file" value="{{ img_path }}">
-        {% endfor %}
-        <br>
-        <button type="submit">選択</button>
-    </form>
+    <div class="p-content">
+        <form action="/processed" method="post">
+            <h1 class="content_title">
+                どの選手の情報が見たいですか？
+            </h1>
+            <p>
+                情報が見たい選手をラジオボタンで選択してね！
+            </p>
+            {% for img_path in processed_image_paths %}
+            <div class="p-image">
+                <img src="{{ img_path }}" style="margin: 20px; width: 200px;">
+                <input class="f-image" type="radio" name="processed_file" value="{{ img_path }}">
+            </div>
+            {% endfor %}
+            <br>
+            <div class="p-button">
+                <button type="submit">選択</button>
+            </div>
+        </form>
+    </div>
 </main>
 
 {% endblock %}

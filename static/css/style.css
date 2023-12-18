@@ -122,6 +122,38 @@ main {
     width: 350px;
 }
 
+.p-content p {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.p-image {
+    box-sizing: border-box;
+    background-color:#ffffff;
+    width: 400px;
+    padding:.7em;
+    margin: 5px auto;
+    border: 3px solid rgb(154, 170, 245);
+    border-radius: 15px;
+}
+
+.f-image {
+    transform: scale(2.0);
+    cursor: pointer;
+    accent-color: green;
+}
+
+.p-button {
+    margin: 30px;
+}
+
+.p-button button {
+    font-size: 20px;
+    padding: 10px 20px;
+    background-color:#ace8ff;
+    cursor: pointer;
+}
+
 .link-content p {
     font-size: 20px;
     font-weight: 100;

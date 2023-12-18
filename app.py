@@ -70,9 +70,16 @@ def upload_user_files():
                 label=label,
                 img_path=processed_file,
             )
-        if label == "carvajal":
+        elif label == "carvajal":
             return render_template(
                 "carvajal.html",
+                probability=int(probability),
+                label=label,
+                img_path=processed_file,
+            )
+        elif label == "ceballos":
+            return render_template(
+                "ceballos.html",
                 probability=int(probability),
                 label=label,
                 img_path=processed_file,
@@ -80,6 +87,13 @@ def upload_user_files():
         elif label == "courtois":
             return render_template(
                 "courtois.html",
+                probability=int(probability),
+                label=label,
+                img_path=processed_file,
+            )
+        elif label == "joselu":
+            return render_template(
+                "joselu.html",
                 probability=int(probability),
                 label=label,
                 img_path=processed_file,
@@ -129,6 +143,13 @@ def upload_user_files():
         elif label == "valverde":
             return render_template(
                 "valverde.html",
+                probability=int(probability),
+                label=label,
+                img_path=processed_file,
+            )
+        elif label == "vazquez":
+            return render_template(
+                "vazwuez.html",
                 probability=int(probability),
                 label=label,
                 img_path=processed_file,
