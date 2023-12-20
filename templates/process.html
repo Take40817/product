@@ -3,24 +3,65 @@
 
 <main style="text-align: center;">
     <div class="p-content">
-        <form action="/processed" method="post">
-            <h1 class="content_title">
-                どの選手の情報が見たいですか？
-            </h1>
+        {% if processed_image_paths %}
+            <form action="/processed" method="post">
+                <h1 class="content_title">
+                    どの選手の情報が見たいですか？
+                </h1>
+                <p>
+                    情報が見たい選手をラジオボタンで選択してね！
+                </p>
+                {% for img_path in processed_image_paths %}
+                    <div class="p-image">
+                        <img src="{{ img_path }}" style="margin: 20px; width: 200px;">
+                        <input class="f-image" type="radio" name="processed_file" value="{{ img_path }}">
+                    </div>
+                {% endfor %}
+                <br>
+                <div class="p-button">
+                    <button type="submit">選択</button>
+                </div>
+            </form>
+        {% else %}
             <p>
-                情報が見たい選手をラジオボタンで選択してね！
+                <br>
+                申し訳ございません。写真から顔を認証することができませんでした。<br>
+                写真から顔画像をトリミング後、もう一度こちらからファイルの選択をお願いします。
             </p>
-            {% for img_path in processed_image_paths %}
-            <div class="p-image">
-                <img src="{{ img_path }}" style="margin: 20px; width: 200px;">
-                <input class="f-image" type="radio" name="processed_file" value="{{ img_path }}">
+            <div class="content">
+                <form action = "/non_processed" method="post" enctype="multipart/form-data">
+                    <p><input type="file" id = "upload_file" name = "upload_file" multiple="multiple" class="form_control"></p>
+                    <div class="upload_btn">
+                        <input type="submit" value="送信">
+                    </div>
+                </form>
             </div>
-            {% endfor %}
-            <br>
-            <div class="p-button">
-                <button type="submit">選択</button>
+            <div class="attention">
+                <div class="a-title">写真の認識が上手くいかない方へ</div>
+                <p>
+                    テレビに映っている選手を撮影した時などに選手の顔を上手く認識できない場合があります。そんな場合は以下の方法によって写真の補正を行うと認識精度が上がります！
+                </p>
+                <div class="ex-content">
+                    <div class="ex-flex">
+                        <p><strong>補正前</strong></p>
+                        <div class="ex-img"><img src="../static/background_image/b-correction.png"></div>
+                    </div>
+                    <div class="ex-flex">
+                        <p><strong>補正後</strong></p>
+                        <div class="ex-img"><img src="../static/background_image/a-correction.png"></div>
+                    </div>
+                </div>
+                <p>
+                    このようにiPhoneの場合、写真を開くと右上に「編集」ボタンがあり、ここをタップして「魔法の杖マーク」をタップすると自動で写真の補正を行ってくれます。見た目ではわかりずらいですが、この操作により顔の輪郭が強調されるため、顔の認識精度を上げることができます。<br>
+                    <br>
+                    Androidの場合は機種によって操作方法が異なりますが、顔の認識精度が悪いと感じたら、写真の自動補正を行ってみましょう。<br>
+                    <br>
+                </p>
+                <h2 class="title2">
+                    ※この方法を使用する際は左上の「今すぐサッカー選手を予測！」を押してから選手予測を行って<br>
+                    　ください。</h2>
             </div>
-        </form>
+        {% endif %}
     </div>
 </main>
 

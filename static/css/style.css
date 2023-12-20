@@ -23,21 +23,27 @@ header {
     z-index: 10;
     display: flex;
 }
-  
+
 .logo {
     font-size: 25px;
     font-weight: bold;
 }
-  
+
 nav {
     margin: 0 0 0 auto;
 }
-  
+
 ul {
     display: flex;
     list-style: none;
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
+    background-color:#ffefef;
+}
+
+ul:hover {
+    background-color: #ffe4e4;
 }
 
 a {
@@ -91,6 +97,48 @@ main {
     border-bottom: solid 3px #925cf7;/* 下線 */
 }
 
+.import-img img {
+    display: inline-block;
+    width: 1000px;
+}
+
+.attention {
+    margin: 60px auto;
+    width: 60%;
+    text-align: left;
+}
+
+.a-title {
+    font-size: 25px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.attention p {
+    font-size: 20px;
+    font-weight: 100;
+    color: #000000;
+}
+
+.ex-content {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.ex-flex {
+    margin: 0px 50px;
+}
+
+.ex-flex img {
+    display: inline-block;
+    width: 350px;
+}
+
+.title2 {
+    color: red;
+}
+
 .rule-content {
     display: flex;
     justify-content: center;
@@ -102,7 +150,7 @@ main {
 }
 
 .rule-content-b {
-    width: 60%;
+    width: 70%;
     margin: auto;
 }
 
@@ -126,6 +174,16 @@ main {
     font-size: 20px;
     font-weight: bold;
 }
+
+.p-content a {
+    display: inline;
+    color: #1900ff;
+}
+
+.p-content a:hover {
+    color: #00e1ff;
+}
+
 
 .p-image {
     box-sizing: border-box;
