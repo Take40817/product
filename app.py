@@ -32,6 +32,9 @@ def rule():
 def process_use_files():
     if request.method == "POST":
         upload_file = request.files["upload_file"]
+        # ファイルが選択されていない場合の処理
+        if "upload_file" not in request.files or upload_file.filename == "":
+            return render_template("error.html", message="ファイルを正しく選択してください")
         img_path = os.path.join(PREPROCESS_FOLDER, upload_file.filename)
         upload_file.save(img_path)
         recog_img(img_path, PROCESSED_FOLDER)
@@ -173,6 +176,9 @@ def non_processed_files():
     if request.method == "POST":
         # processed_image内の一つの写真を使って予測
         upload_file = request.files["upload_file"]
+        # ファイルが選択されていない場合の処理
+        if "upload_file" not in request.files or upload_file.filename == "":
+            return render_template("error.html", message="ファイルを正しく選択してください")
         img_path = os.path.join(PROCESSED_FOLDER, upload_file.filename)
         upload_file.save(img_path)
         label, probability = predict(img_path)
